@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyStack</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="theme-brown">
+    <header>
+        <img src="{{ url_for('static', filename='images/studystacklogo.png') }}" alt="StudyStack Logo" class="logo">
+        <nav>
+            <a href="/create_deck">Create Deck</a>
+            <a href="/popular">Popular Decks</a>
+            <a href="/create_account">Create Account</a>
+            <a href="/sign_in">Sign In</a>
+        </nav>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Top Users (By Likes)</h2>
+            <ol>
+                <li>riujtiorjt</li>
+                <li>dsfknsldknflsdk</li>
+                <li>fjsd;lofjsdljkf</li>
+                <li>dfsojksdp;ofkjsd</li>
+                <li>user5</li>
+                <li>user6</li>
+                <li>user7</li>
+                <li>user8</li>
+                <li>user9</li>
+                <li>user10</li>
+            </ol>
+        </aside>
+        <main class="deck-grid">
+            {% for i in range(6) %}
+            <div class="deck-card">
+                <div class="deck-image"></div>
+                <div class="deck-info">
+                    <strong>State Capitals Deck</strong><br>
+                    By User1234<br>
+                    1999 views | 15 likes
+                </div>
+            </div>
+            {% endfor %}
+        </main>
+    </div>
+    <footer>
+        <p>Theme: 
+            <button onclick="setTheme('theme-brown')">Brown</button>
+            <button onclick="setTheme('theme-light')">Light</button>
+            <button onclick="setTheme('theme-dark')">Dark</button>
+            <button onclick="setTheme('theme-green')">Green</button>
+        </p>
+    </footer>
+    <script>
+        function setTheme(theme) {
+            document.body.className = theme;
+        }
+    </script>
+</body>
+</html>

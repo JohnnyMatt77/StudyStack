@@ -1,0 +1,98 @@
+header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .logo {
+    height: 100px;
+    width: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3C8E1B;
+    color: white;
+    padding: 1em 2em;
+}
+
+header nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    padding: 1em;
+    border-right: 2px solid black;
+}
+
+.deck-grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    padding: 1em;
+}
+
+.deck-card {
+    border: 3px solid black;
+    padding: 1em;
+    background-color: white;
+}
+
+.deck-image {
+    width: 100%;
+    height: 100px;
+    background-color: #ddd;
+    margin-bottom: 0.5em;
+}
+
+footer {
+    text-align: center;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+/* Themes */
+.theme-brown {
+    background-color: #f2e8dc;
+    color: #4b3621;
+}
+
+.theme-light {
+    background-color: white;
+    color: black;
+}
+
+.theme-dark {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.theme-green {
+    background-color: #e6ffe6;
+    color: #2d4d2a;
+}
